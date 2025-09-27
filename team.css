@@ -102,6 +102,8 @@ a {
   outline: 0;
 }
 
+
+/* main */
 .section-tours {
   margin: 15rem 30rem 1rem 30rem;
   background: rgba(255, 255, 255, 0.08);
@@ -111,7 +113,8 @@ a {
  
 }
 .section-features {
-  padding: 0 5rem;
+  padding: 5rem 5rem;
+  /* padding-bottom: 3rem; */
 }
 /* publication */
 .heading-secondary {
@@ -125,6 +128,7 @@ a {
   letter-spacing: 0.2rem;
   transition: all 0.2s;
   text-align: center;
+  margin-bottom: 2rem;
 }
 .heading-secondary:hover {
   transform: scale(1.1);
@@ -134,7 +138,7 @@ a {
   text-align: center;
 }
 .u-margin-bottom-big {
-  margin-bottom: 8rem;
+  margin-bottom: 2rem;
 }
 .paragragh {
   margin: -2rem 18rem 6rem 18rem;
@@ -146,10 +150,10 @@ a {
 }
 
 /* .row */
-.section-tours {
+/* .section-tours {
   padding: 7rem 0 0 0;
   /* margin-bottom: -3rem; */
-}
+} */
 
 /* team members */
 .card {
@@ -375,37 +379,60 @@ a {
 
 
 
-/* footer */
+/* --- layout wrapper to keep footer at bottom --- */
+.site-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.site-content {
+  flex: 1; /* محتوا فضای باقیمانده را پر می‌کند */
+}
+
+/* --- footer styles --- */
 .footer {
-  height: 170px;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1));
-  margin-top: 100px;
-  box-shadow: 2px 4px 8px rgb(68, 67, 67);
+  background: linear-gradient(180deg, rgba(0,0,0,0.8), rgba(0,0,0,0.8));
+  box-shadow: 2px 4px 8px rgba(68,67,67,0.8);
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  padding: 4rem 1rem; /* جایگزین height ثابت */
+  margin-top: 70px;   /* فاصله از محتوای بالایی */
 }
 
-.logo img {
-  width: 170px;
-  margin-bottom: 20px;
+.footer .logo img {
+  width: 150px;
+  max-width: 34vw;
+  height: auto;
+  margin-bottom: 1rem;
 }
 
+/* social icons */
+.footer .social-icons {
+  display: flex;
+  /* gap: .5rem; */
+  justify-content: center;
+  margin-bottom: 1rem;
+}
 .footer .social-icons a {
+  display: inline-flex;  /* جلوگیری از block شدن */
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  font-size: 20px;
   color: #fff;
-  margin: 0 10px;
-  font-size: 24px;
   transition: color 0.3s ease;
-  padding: 0 15px;
+  text-decoration: none;
 }
-
 .footer .social-icons a:hover {
   color: #c69963;
 }
-.copyright {
- color: #aaa;
- font-size: .7rem;
- margin-top: 1rem;
+
+/* copyright */
+.footer .copyright {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin: 0;
 }

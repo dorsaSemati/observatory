@@ -248,11 +248,10 @@ body {
   grid-column-gap: 2.5rem;
   align-items: start;
   grid-column: 1/-1;
-
 }
 .features h1 {
-    font-size: 1rem;
-} 
+  font-size: 1rem;
+}
 @supports (display: grid) {
   .feature {
     width: auto;
@@ -307,6 +306,13 @@ main img {
   object-fit: cover;
   object-position: center;
   margin: 20px auto;
+}
+
+.sfh-img {
+  width: 50%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
 }
 /* 
 /* footer */
